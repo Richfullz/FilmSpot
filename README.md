@@ -58,5 +58,5 @@
 ### opiniones de los usuarios sobre ese listado
 ### usuarios y administradores
 ### administrador gestiona el contenido del cine, eliminando o baneando usuarios en caso de que no se cumplieran ciertas normas o requisitos
-
+### diseño
 
