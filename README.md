@@ -2,6 +2,7 @@
 ## PROYECTO DE ARTICULOS DE CINE CREADA CON REACT
 ### ![image](https://github.com/user-attachments/assets/03b09a8f-16bf-4370-aeb0-f224c5bad0b8)
 ### ![image](https://github.com/user-attachments/assets/425c85c0-09ef-4d21-a4af-163779ede0e8)
+
 ## INSTALACIÓN
 ### Empecé creando el proyecto con el comando npx create-react filmspot
 ### una vez creado dividí los componentes en dos carpetas: components y helpers
@@ -44,4 +45,18 @@
 ### Aquí guardamos y almacenamos los datos que creamos del listado de peliculas en el navegador local, obtiene los datos los datos actuales en este y los convierte en un JSON a un array de javascript, si exite agrega el nuevo 
 ### elemento al array(editar), si no existe , crea un nuevo array con el elemento, guarda el array actualizado de nuevo en el localStorage en formato JSON y devuelve el elemento que se acaba de guardar
 ### <img width="885" height="567" alt="image" src="https://github.com/user-attachments/assets/6d960a93-dbe8-4554-b76c-c08981f47dc7" />
+
+## Tecnologías utilizadas
+- React
+- Node.js
+
+## Mejoras futuras / Pendientes
+### Base de datos y que se permitan registrarse ususarios
+### mejorar la barra de navegación
+### Documentar la pagina y en que consiste(una seccion de informacion)
+### añadir una parte que se puedan subir las imagenes a los listados de las peliculas creadas
+### opiniones de los usuarios sobre ese listado
+### usuarios y administradores
+### administrador gestiona el contenido del cine, eliminando o baneando usuarios en caso de que no se cumplieran ciertas normas o requisitos
+
 
