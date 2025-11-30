@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# 🎬 FilmSpot  
+*CRUD de películas con React + localStorage*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
+![license](https://img.shields.io/badge/license-MIT-green)
 
-## Available Scripts
+> Crea, busca, edita y borra películas sin backend.  
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ⚡ Instalación
+git clone https://github.com/Richfullz/FilmSpot.git
+cd FilmSpot
+npm install
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📁 Estructura
+- Copy
+- src/
+- ├─ components/   Buscador | Crear | Editar | Listado
+- └─ helpers/      GuardarEnStorage.js
+- 
+## 🔍 Qué hace cada componente
+ <details>
+ <summary>📸 App (layout general)</summary>
+ <img width="662" height="743" alt="header+y lateral" src="https://github.com/user-attachments/assets/ae2ead20-c4a2-42c7-888f-d6c88835224a" />
+ <img width="482" height="341" alt="form crear" src="https://github.com/user-attachments/assets/6582bc5c-da3e-4f62-bc77-e13fa82d17a7" />
+  <br/>
+ Cabecera con logo personalizado, navegación, zona de contenido (listado) y barra lateral (buscador + form crear).
+ </details>
+ <details>
+ <summary>🔎 Buscador (filtro en tiempo real)</summary>
+ <img width="652" height="683" alt="Captura de pantalla 2025-07-11 102416" src="https://github.com/user-attachments/assets/3594072a-6336-49ae-87d7-f1a229cfddd5" />
+  <br/>
+ Estado local busqueda + noEncontrado.
+ Filtra por título; si no hay coincidencias restaura la lista original y muestra «No hay resultados».
+ </details>
+ <details>
+ <summary>➕ Crear (nueva película)</summary>
+ <img width="642" height="768" alt="crear" src="https://github.com/user-attachments/assets/6fbc6e68-dcf5-4284-834d-0cca367123da" />
+  <br/>
+ Formulario simple (título + descripción).
+ Genera id único con Date.now(), actualiza el estado global y persiste en localStorage vía GuardarEnStorage.
+ </details>
+ <details>
+ <summary>✏️ Editar (inline)</summary>
+ <img width="680" height="742" alt="editar" src="https://github.com/user-attachments/assets/6a61e19e-ad79-44d1-960a-c0fc5013e412" />
+  <br/>
+ Botón Editar abre formulario inline.
+ Usa findIndex para localizar la película por id, reemplaza el elemento, vuelca el array a localStorage y cierra el formulario (setEditar(0)).
+ </details>
+ <details>
+ <summary>📜 Listado + Borrar</summary>
+ <img width="742" height="822" alt="listado" src="https://github.com/user-attachments/assets/f86f5960-4c52-4847-b857-51159533eff9" />
+  <br/>
+ Muestra todas las películas.
+ Simula carga 2 s con setTimeout / spinner.
+ Borrado: filter por id y actualiza localStorage.
+ </details>
+ <details>
+ <summary>💾 GuardarEnStorage (helper)</summary>
+ <img width="885" height="567" alt="helper" src="https://github.com/user-attachments/assets/6d960a93-dbe8-4554-b76c-c08981f47dc7" />
+  <br/>
+ Si ya existe array en localStorage → push.
+ Si no → crea array con el nuevo elemento.
+ Devuelve el elemento guardado.
+ </details>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tecnologías
+- React 18
+- Node.js (entorno de desarrollo)
+- localStorage (persistencia)
 
-### `npm test`
+# 🚀 Roadmap / Mejoras futuras
+- [ ] Base de datos real + registro de usuarios
+- [ ] Subida de carátulas
+- [ ] Roles: usuario / administrador
+- [ ] Sección de opiniones / valoraciones
+- [ ] Barra de navegación mejorada
+- [ ] Página de documentación / «¿Qué es FilmSpot?»
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 📄 Licencia
+© GitHub: Richfullz
+© LinkedIn: Alejandro Pascual
