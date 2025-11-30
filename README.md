@@ -14,12 +14,16 @@ cd FilmSpot
 npm install
 npm start
 
+---
+
 ## 📁 Estructura
 - Copy
 - src/
 - ├─ components/   Buscador | Crear | Editar | Listado
 - └─ helpers/      GuardarEnStorage.js
-- 
+
+---
+
 ## 🔍 Qué hace cada componente
  <details>
  <summary>📸 App (layout general)</summary>
@@ -66,10 +70,14 @@ npm start
  Devuelve el elemento guardado.
  </details>
 
+---
+
 ## 🛠 Tecnologías
 - React 18
 - Node.js (entorno de desarrollo)
 - localStorage (persistencia)
+
+---
 
 # 🚀 Roadmap / Mejoras futuras
 - [ ] Base de datos real + registro de usuarios
@@ -78,6 +86,33 @@ npm start
 - [ ] Sección de opiniones / valoraciones
 - [ ] Barra de navegación mejorada
 - [ ] Página de documentación / «¿Qué es FilmSpot?»
+
+---
+
+## 🚀 Cómo desplegué a GitHub Pages
+1. Instalé gh-pages como devDependency:
+npm install -D gh-pages
+2. Añadí en package.json:
+JSON
+Copy
+"homepage": "https://richfullz.github.io/FilmSpot"
+y los scripts:
+JSON
+Copy
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+Ejecuté:
+bash
+Copy
+npm run deploy
+3. GitHub compila y sirve la carpeta build automáticamente en la rama gh-pages.
+Copy
+- Commit & push:
+git add README.md
+git commit -m "docs: añadido link de demo y pasos de deploy"
+git push origin main
+
+---
 
 # 📄 Licencia
 © GitHub: Richfullz
