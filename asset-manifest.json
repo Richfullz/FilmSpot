@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FilmSpot/static/css/main.a6c50c4c.css",
+    "main.js": "/FilmSpot/static/js/main.aa0ba9b4.js",
+    "index.html": "/FilmSpot/index.html",
+    "main.a6c50c4c.css.map": "/FilmSpot/static/css/main.a6c50c4c.css.map",
+    "main.aa0ba9b4.js.map": "/FilmSpot/static/js/main.aa0ba9b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6c50c4c.css",
+    "static/js/main.aa0ba9b4.js"
+  ]
+}
